@@ -1,0 +1,35 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background: black;
+
+}
+:root{
+    --flag-height: 200px;
+    --blue: #024985;
+    --yellow: #ffcc00;
+    --flag-width: calc(var(var(--flag-height)*6/5));
+}
+.main_cont{
+    height: var(--flag-height);
+    width: calc(var(--flag-height)*8/5);
+    background: var(--blue);
+    display: flex;
+    margin: 3rem auto;
+    position: relative;
+
+}
+.strip1{
+background: var(--yellow);
+height: calc(var(--flag-height)*1/5);
+align-self: center;
+width: 100%;
+}
+.strip2{
+    background: var(--yellow);
+    height: calc(var(--flag-height)*1/5);
+    width: var(--flag-height);
+    position: absolute;
+    transform: rotate(90deg);
+    top: calc(var(--flag-height)*4/10);
+}

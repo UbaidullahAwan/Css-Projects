@@ -1,0 +1,26 @@
+:root{
+    --white: #ffffff;
+    --red: #ff0002;
+    --flag-hw: 400px;
+}
+.switz{
+    height: var(--flag-hw);
+    width: var(--flag-hw);
+    background: var(--red);
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.white1{
+    height: calc(var(--flag-hw)*3/16);
+    width: calc(var(--flag-hw)*5/8);
+    background: var(--white);
+}
+.white2{
+    height: calc(var(--flag-hw)*5/8);
+    width: calc(var(--flag-hw)*3/16);
+    background: var(--white);
+    position: absolute;
+}

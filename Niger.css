@@ -1,0 +1,38 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+:root{
+    --orange: #E35307;
+    --white: #ffffff;
+    --green: #14Af2a;
+    --flag-height: 200px;
+}
+.main_cont{
+    background: blue;
+    height: var(--flag-height);
+    width: calc(var(--flag-height)*7/6);
+    margin: 1em auto;
+    display: grid;
+    position: relative;
+}
+.orange{
+    background: var(--orange);
+}
+.white{
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.green{
+    background: var(--green);
+}
+.circle{
+    background: var(--orange);
+    height: calc(var(--flag-height)/3 *.85);
+    width: calc(var(--flag-height)/3 *.85);
+    border-radius: 50%;
+    position: absolute;
+}
