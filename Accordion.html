@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian</title>
+    <style>
+        .accordion{
+            background-color: #eee;
+            font-size: 14px;
+            color: #444;
+            cursor: pointer;
+            outline: none;
+            transition: 0.4s;
+            padding: 18px;
+            border: none;
+            text-align: left;
+            width: 80%;
+        }
+        .active, .accordion:hover{
+            background-color: #ccc;
+        }
+        .accordion:after{
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float : right;
+            margin: 5px;
+        }
+        .active:after{
+            content: '\2212';
+        }
+        .panel{
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            width: 80%;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Accordion</h3>
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d
+            o eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d
+            o eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed d
+            o eiusmod tempor incididunt ut labore et dolore magna aliqua.
+             Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;                  // acc varialbes saves all the accordion classes// declaring varialbe i
+        for (i = 0; i < acc.length; i++) {                     // for loop to loop each class
+          acc[i].addEventListener("click", function() {         // addEventListener is user to 
+                                                                // add function when there is clicked 
+          this.classList.toggle("active");                    // this. actullay refers to the active a
+                                                    // accordion. classList.toggle 
+            var panel = this.nextElementSibling;        // is used to shows if 
+            if (panel.style.maxHeight) {
+              panel.style.max .eight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+</body>
+</html>
